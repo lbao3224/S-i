@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Bảng giá &amp; tồn kho</title>
+<!-- Tailwind CSS v3 with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              green: '#0ea57a',
+              darkGreen: '#0d765e',
+              emerald: '#10b981',
+              lightMint: '#dcfce7',
+              textDark: '#1e293b',
+              accentBlue: '#2563eb'
+            }
+          },
+          fontFamily: {
+            sans: ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Helvetica', 'Arial', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-layout">
+    /* Custom scrollbar hiding and safe area adaptations */
+    body {
+      -webkit-font-smoothing: antialiased;
+      -webkit-tap-highlight-color: transparent;
+      background-color: #f3f4f6;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="flex justify-center min-h-screen text-slate-800 font-sans select-none">
+<!-- BEGIN: MobileContainer -->
+<div class="w-full max-w-md bg-white min-h-screen flex flex-col relative pb-20 shadow-lg">
+<!-- Top Status / Partial Peek Header Bar -->
+<div class="pt-2 px-4 bg-slate-50 border-b border-slate-100 flex items-center justify-between">
+<div class="text-[17px] font-extrabold text-slate-900 tracking-tight truncate pb-1">
+        Cà Phê Sáng Cố Đô
+      </div>
+</div>
+<!-- BEGIN: TopFilterTabs -->
+<!-- Filter status pills representing inventory status -->
+<section class="px-3 pt-3 pb-2 bg-slate-50 border-b border-slate-100" data-purpose="status-filters">
+<div class="grid grid-cols-3 gap-2 text-center text-xs font-semibold">
+<!-- Đủ hàng Tab (Active / White card) -->
+<button class="py-2.5 px-1 bg-white rounded-xl shadow-sm border border-slate-200 text-slate-700 active:scale-95 transition-transform flex items-center justify-center font-bold">
+          Đủ hàng
+        </button>
+<!-- Sắp hết Tab (Warm yellow card) -->
+<button class="py-2.5 px-1 bg-[#fffbeb] rounded-xl border border-[#fef3c7] text-[#d97706] active:scale-95 transition-transform flex items-center justify-center font-bold">
+          Sắp hết
+        </button>
+<!-- Hết hàng Tab (Light pink/red card) -->
+<button class="py-2.5 px-1 bg-[#fff1f2] rounded-xl border border-[#ffe4e6] text-[#e11d48] active:scale-95 transition-transform flex items-center justify-center font-bold">
+          Hết hàng
+        </button>
+</div>
+</section>
+<!-- END: TopFilterTabs -->
+<!-- BEGIN: MainContentList -->
+<main class="flex-1 px-4 pt-4 pb-6 overflow-y-auto no-scrollbar" data-purpose="inventory-price-list">
+<!-- Section Header -->
+<div class="flex items-start justify-between mb-4">
+<div>
+<h1 class="text-xl font-bold text-slate-900 tracking-tight">Bảng giá &amp; tồn kho</h1>
+<p class="text-xs text-slate-400 mt-0.5">Quét nhanh trạng thái từng mặt hàng.</p>
+</div>
+<!-- + Thêm Button -->
+<button class="text-emerald-600 font-semibold text-sm flex items-center gap-1 active:opacity-75 pt-1">
+<span class="text-base leading-none">+</span> Thêm
+        </button>
+</div>
+<!-- Inventory Items List -->
+<div class="space-y-5">
+<!-- Item 1: Cà phê đen -->
+<div class="border-b border-slate-100 pb-3" data-purpose="product-item">
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="text-[17px] font-bold text-slate-900 leading-tight">Cà phê đen</span>
+<span class="bg-[#e6f8f0] text-[#059669] text-[10px] font-semibold px-1.5 py-0.5 rounded">Đủ hàng</span>
+</div>
+<div class="text-[13px] text-slate-400 mt-1">Đồ uống · vốn 7.000đ</div>
+</div>
+<div class="text-right">
+<div class="text-[17px] font-bold text-[#0284c7] leading-tight">18.000đ</div>
+<div class="flex items-center justify-end gap-2 text-[13px] mt-1">
+<a class="text-[#2563eb] hover:underline" href="#">Sửa</a>
+<span class="text-slate-400">Đang bán</span>
+</div>
+</div>
+</div>
+<!-- Stock Level Progress Bar -->
+<div class="mt-2.5 flex items-center gap-2">
+<div class="flex-1 bg-slate-100 h-2 rounded-full overflow-hidden">
+<div class="bg-[#10b981] h-full rounded-full w-full"></div>
+</div>
+<span class="text-[12px] font-semibold text-slate-600 min-w-[42px] text-right">112 ly</span>
+</div>
+</div>
+<!-- Item 2: Cà phê sữa -->
+<div class="border-b border-slate-100 pb-3" data-purpose="product-item">
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="text-[17px] font-bold text-slate-900 leading-tight">Cà phê sữa</span>
+<span class="bg-[#e6f8f0] text-[#059669] text-[10px] font-semibold px-1.5 py-0.5 rounded">Đủ hàng</span>
+</div>
+<div class="text-[13px] text-slate-400 mt-1">Đồ uống · vốn 10.000đ</div>
+</div>
+<div class="text-right">
+<div class="text-[17px] font-bold text-[#0284c7] leading-tight">25.000đ</div>
+<div class="flex items-center justify-end gap-2 text-[13px] mt-1">
+<a class="text-[#2563eb] hover:underline" href="#">Sửa</a>
+<span class="text-slate-400">Đang bán</span>
+</div>
+</div>
+</div>
+<!-- Stock Level Progress Bar -->
+<div class="mt-2.5 flex items-center gap-2">
+<div class="flex-1 bg-slate-100 h-2 rounded-full overflow-hidden">
+<div class="bg-[#10b981] h-full rounded-full w-full"></div>
+</div>
+<span class="text-[12px] font-semibold text-slate-600 min-w-[42px] text-right">148 ly</span>
+</div>
+</div>
+<!-- Item 3: Bạc xỉu -->
+<div class="border-b border-slate-100 pb-3" data-purpose="product-item">
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="text-[17px] font-bold text-slate-900 leading-tight">Bạc xỉu</span>
+<span class="bg-[#e6f8f0] text-[#059669] text-[10px] font-semibold px-1.5 py-0.5 rounded">Đủ hàng</span>
+</div>
+<div class="text-[13px] text-slate-400 mt-1">Đồ uống · vốn 12.000đ</div>
+</div>
+<div class="text-right">
+<div class="text-[17px] font-bold text-[#0284c7] leading-tight">28.000đ</div>
+<div class="flex items-center justify-end gap-2 text-[13px] mt-1">
+<a class="text-[#2563eb] hover:underline" href="#">Sửa</a>
+<span class="text-slate-400">Đang bán</span>
+</div>
+</div>
+</div>
+<!-- Stock Level Progress Bar -->
+<div class="mt-2.5 flex items-center gap-2">
+<div class="flex-1 bg-slate-100 h-2 rounded-full overflow-hidden">
+<div class="bg-[#10b981] h-full rounded-full w-full"></div>
+</div>
+<span class="text-[12px] font-semibold text-slate-600 min-w-[42px] text-right">80 ly</span>
+</div>
+</div>
+<!-- Item 4: Trà đào cam sả -->
+<div class="border-b border-slate-100 pb-3" data-purpose="product-item">
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="text-[17px] font-bold text-slate-900 leading-tight">Trà đào cam sả</span>
+<span class="bg-[#e6f8f0] text-[#059669] text-[10px] font-semibold px-1.5 py-0.5 rounded">Đủ hàng</span>
+</div>
+<div class="text-[13px] text-slate-400 mt-1">Đồ uống · vốn 14.000đ</div>
+</div>
+<div class="text-right">
+<div class="text-[17px] font-bold text-[#0284c7] leading-tight">35.000đ</div>
+<div class="flex items-center justify-end gap-2 text-[13px] mt-1">
+<a class="text-[#2563eb] hover:underline" href="#">Sửa</a>
+<span class="text-slate-400">Đang bán</span>
+</div>
+</div>
+</div>
+<!-- Stock Level Progress Bar -->
+<div class="mt-2.5 flex items-center gap-2">
+<div class="flex-1 bg-slate-100 h-2 rounded-full overflow-hidden">
+<div class="bg-[#10b981] h-full rounded-full w-full"></div>
+</div>
+<span class="text-[12px] font-semibold text-slate-600 min-w-[42px] text-right">60 ly</span>
+</div>
+</div>
+<!-- Item 5: Nước suối -->
+<div class="border-b border-slate-100 pb-3" data-purpose="product-item">
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="text-[17px] font-bold text-slate-900 leading-tight">Nước suối</span>
+<span class="bg-[#e6f8f0] text-[#059669] text-[10px] font-semibold px-1.5 py-0.5 rounded">Đủ hàng</span>
+</div>
+<div class="text-[13px] text-slate-400 mt-1">Đồ uống · vốn 5.000đ</div>
+</div>
+<div class="text-right">
+<div class="text-[17px] font-bold text-[#0284c7] leading-tight">10.000đ</div>
+<div class="flex items-center justify-end gap-2 text-[13px] mt-1">
+<a class="text-[#2563eb] hover:underline" href="#">Sửa</a>
+<span class="text-slate-400">Đang bán</span>
+</div>
+</div>
+</div>
+<!-- Stock Level Progress Bar (Partial) -->
+<div class="mt-2.5 flex items-center gap-2">
+<div class="flex-1 bg-slate-100 h-2 rounded-full overflow-hidden">
+<div class="bg-[#10b981] h-full rounded-full w-[48%]"></div>
+</div>
+<span class="text-[12px] font-semibold text-slate-600 min-w-[48px] text-right">40 chai</span>
+</div>
+</div>
+<!-- Item 6: Sinh tố bơ -->
+<div class="border-b border-slate-100 pb-3" data-purpose="product-item">
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="text-[17px] font-bold text-slate-900 leading-tight">Sinh tố bơ</span>
+<span class="bg-[#e6f8f0] text-[#059669] text-[10px] font-semibold px-1.5 py-0.5 rounded">Đủ hàng</span>
+</div>
+<div class="text-[13px] text-slate-400 mt-1">Đồ uống · vốn 18.000đ</div>
+</div>
+<div class="text-right">
+<div class="text-[17px] font-bold text-[#0284c7] leading-tight">40.000đ</div>
+<div class="flex items-center justify-end gap-2 text-[13px] mt-1">
+<a class="text-[#2563eb] hover:underline" href="#">Sửa</a>
+<span class="text-slate-400">Đang bán</span>
+</div>
+</div>
+</div>
+<!-- Stock Level Progress Bar (70% fill) -->
+<div class="mt-2.5 flex items-center gap-2">
+<div class="flex-1 bg-slate-100 h-2 rounded-full overflow-hidden">
+<div class="bg-[#10b981] h-full rounded-full w-[70%]"></div>
+</div>
+<span class="text-[12px] font-semibold text-slate-600 min-w-[42px] text-right">25 ly</span>
+</div>
+</div>
+</div>
+</main>
+<!-- END: MainContentList -->
+<!-- BEGIN: BottomNavigationBar -->
+<nav class="fixed bottom-0 max-w-md w-full bg-white border-t border-slate-200 z-50 flex items-center justify-between px-3 py-1.5" data-purpose="bottom-nav">
+<!-- Tab 1: Sổ ơi -->
+<button class="flex flex-col items-center justify-center flex-1 py-1 text-slate-400 hover:text-slate-600">
+<!-- Grid/Booklet Icon -->
+<svg class="w-5 h-5 stroke-[1.8]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<rect height="6" rx="1" width="6" x="4" y="4"></rect>
+<rect height="6" rx="1" width="6" x="14" y="4"></rect>
+<rect height="6" rx="1" width="6" x="4" y="14"></rect>
+<rect height="6" rx="1" width="6" x="14" y="14"></rect>
+</svg>
+<span class="text-[11px] font-medium mt-0.5">Sổ ơi</span>
+</button>
+<!-- Tab 2: Bán hàng -->
+<button class="flex flex-col items-center justify-center flex-1 py-1 text-slate-400 hover:text-slate-600">
+<!-- Shopping Cart Icon -->
+<svg class="w-5 h-5 stroke-[1.8]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<circle cx="9" cy="20" r="1"></circle>
+<circle cx="17" cy="20" r="1"></circle>
+<path d="M3 4h2l2.3 9.2a2 2 0 0 0 2 1.8h7.9a2 2 0 0 0 2-1.6L20.8 7H6"></path>
+</svg>
+<span class="text-[11px] font-medium mt-0.5">Bán hàng</span>
+</button>
+<!-- Center Voice/Mic Button (Elevated) -->
+<div class="flex flex-col items-center justify-center flex-1 relative -top-3">
+<button aria-label="Microphone Voice Assistant" class="w-12 h-12 rounded-full bg-[#0d765e] text-white flex items-center justify-center shadow-md active:scale-95 transition-transform border-2 border-white">
+<!-- Mic Icon -->
+<svg class="w-6 h-6 stroke-[2]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 2a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M19 10v1a7 7 0 0 1-14 0v-1M12 18v4m-4 0h8" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<!-- Tab 4: Thu chi -->
+<button class="flex flex-col items-center justify-center flex-1 py-1 text-slate-400 hover:text-slate-600">
+<!-- Receipt / Wallet / Money Icon -->
+<svg class="w-5 h-5 stroke-[1.8]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 4H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M7 8h10M7 12h5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-[11px] font-medium mt-0.5">Thu chi</span>
+</button>
+<!-- Tab 5: Quản lý (Active Tab) -->
+<button class="flex flex-col items-center justify-center flex-1 py-1 text-[#0d765e]">
+<!-- Sliders / Management Icon -->
+<svg class="w-5 h-5 stroke-[2]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<line x1="4" x2="20" y1="7" y2="7"></line>
+<line x1="4" x2="20" y1="17" y2="17"></line>
+<circle cx="8" cy="7" fill="white" r="2.5"></circle>
+<circle cx="16" cy="17" fill="white" r="2.5"></circle>
+</svg>
+<span class="text-[11px] font-bold mt-0.5">Quản lý</span>
+</button>
+</nav>
+<!-- END: BottomNavigationBar -->
+</div>
+<!-- END: MobileContainer -->
+</body></html>

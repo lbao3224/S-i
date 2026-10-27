@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-be-vietnam-pro), Arial, sans-serif;
+  --color-sooi-ink: #10231e;
+  --color-sooi-green: #0b7a60;
+  --color-sooi-deep: #12352c;
+  --color-sooi-paper: #f4f1e9;
+  --color-sooi-card: #fffdf8;
+  --color-sooi-line: #d8d5cc;
+}
+
+:root { color-scheme: light; }
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #fffdf8;
+  color: #08283a;
+  font-family: var(--font-be-vietnam-pro), Arial, sans-serif;
+}
+
+button, input, select { font: inherit; }
+button { cursor: pointer; }
+
+::selection { background: #bde5d7; color: #10231e; }

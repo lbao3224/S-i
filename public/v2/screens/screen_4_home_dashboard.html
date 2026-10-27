@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Cà Phê Sáng Sổ Ơi</title>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              emerald: '#0B7A60',
+              deep: '#06624C',
+              mint: '#D8F3E5',
+              mintLight: '#ECFBF2',
+              accent: '#E7973C',
+              bgLight: '#F3F4F4',
+              surface: '#F8FAF9'
+            }
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-styling">
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+    /* Hide scrollbars smoothly */
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+</head>
+<body class="bg-[#F3F4F4] text-[#1E293B] antialiased min-h-screen flex justify-center selection:bg-brand-mint selection:text-brand-deep">
+<!-- Mobile Screen Container -->
+<div class="w-full max-w-[430px] min-h-screen bg-[#F3F4F4] flex flex-col relative pb-28">
+<!-- BEGIN: HeaderSection -->
+<header class="pt-9 pb-3 px-5" data-purpose="page-header">
+<div class="text-[13px] font-medium text-[#64748B] flex items-center gap-1.5 tracking-tight">
+<span>Chào buổi sáng</span>
+<span>·</span>
+<span>Đã đồng bộ</span>
+</div>
+<h1 class="text-[25px] font-extrabold text-[#0F172A] tracking-tight mt-0.5">
+        Cà Phê Sáng Sổ Ơi
+      </h1>
+</header>
+<!-- END: HeaderSection -->
+<!-- BEGIN: MainContent -->
+<main class="flex-1 px-4 flex flex-col gap-5">
+<!-- BEGIN: AICard -->
+<section class="bg-white rounded-[24px] p-5 shadow-[0_2px_12px_rgba(0,0,0,0.03)] border border-[#E9ECEF]" data-purpose="ai-interaction-card">
+<!-- Badge label -->
+<div class="text-[12px] font-bold text-[#0B7A60] tracking-wide mb-1">
+          Nói với Sổ ơi
+        </div>
+<h2 class="text-[19px] font-bold text-[#0F172A] tracking-tight">
+          Sổ ơi, mình làm gì?
+        </h2>
+<p class="text-[13px] text-[#64748B] mt-0.5 mb-4 font-normal">
+          Nói tự nhiên. Sổ sẽ hiểu và làm phần còn lại.
+        </p>
+<!-- Command Input Field -->
+<div class="relative flex items-center bg-[#F8FAFB] rounded-2xl p-1.5 pl-4 border border-[#EDF2F4]">
+<input class="w-full bg-transparent border-0 p-0 text-[13.5px] text-[#1E293B] placeholder-[#94A3B8] focus:ring-0 focus:outline-none pr-2" placeholder="Ví dụ: bán chị Lan 2 cà phê sữa..." type="text"/>
+<div class="flex items-center gap-1.5 shrink-0">
+<!-- Mic button -->
+<button aria-label="Ghi âm giọng nói" class="w-9 h-9 rounded-xl bg-[#0B7A60] text-white flex items-center justify-center hover:bg-[#08634e] active:scale-95 transition-transform" type="button">
+<svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+<!-- Submit arrow button -->
+<button aria-label="Gửi lệnh" class="w-9 h-9 rounded-xl bg-[#0B7A60] text-white flex items-center justify-center hover:bg-[#08634e] active:scale-95 transition-transform" type="button">
+<svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2.2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</div>
+<!-- Suggestion Chips -->
+<div class="flex flex-wrap gap-2 mt-3.5">
+<button class="px-3.5 py-1.5 bg-[#F1F5F7] rounded-full text-[13px] font-medium text-[#475569] active:bg-[#E2E8F0] transition-colors" type="button">
+            Hôm nay bán bao nhiêu?
+          </button>
+<button class="px-3.5 py-1.5 bg-[#F1F5F7] rounded-full text-[13px] font-medium text-[#475569] active:bg-[#E2E8F0] transition-colors" type="button">
+            Ai đang nợ?
+          </button>
+<button class="px-3.5 py-1.5 bg-[#F1F5F7] rounded-full text-[13px] font-medium text-[#475569] active:bg-[#E2E8F0] transition-colors" type="button">
+            Món nào sắp hết?
+          </button>
+</div>
+</section>
+<!-- END: AICard -->
+<!-- BEGIN: DailyActions -->
+<section data-purpose="daily-actions">
+<h3 class="text-[15px] font-extrabold text-[#0F172A] tracking-wider mb-2.5 px-0.5">
+          VIỆC HÔM NAY
+        </h3>
+<!-- 4 Quick Action Cards -->
+<div class="grid grid-cols-4 gap-2.5">
+<!-- Bán hàng -->
+<div class="bg-white rounded-2xl py-3.5 px-1 flex flex-col items-center justify-center border border-[#E9ECEF] shadow-[0_1px_4px_rgba(0,0,0,0.02)] active:scale-95 transition-transform" role="button">
+<div class="w-8 h-8 flex items-center justify-center text-[#0B7A60] mb-1.5">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<span class="text-[13px] font-medium text-[#1E293B]">Bán hàng</span>
+</div>
+<!-- Thu chi -->
+<div class="bg-white rounded-2xl py-3.5 px-1 flex flex-col items-center justify-center border border-[#E9ECEF] shadow-[0_1px_4px_rgba(0,0,0,0.02)] active:scale-95 transition-transform" role="button">
+<div class="w-8 h-8 flex items-center justify-center text-[#0B7A60] mb-1.5">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<span class="text-[13px] font-medium text-[#1E293B]">Thu chi</span>
+</div>
+<!-- Công nợ -->
+<div class="bg-white rounded-2xl py-3.5 px-1 flex flex-col items-center justify-center border border-[#E9ECEF] shadow-[0_1px_4px_rgba(0,0,0,0.02)] active:scale-95 transition-transform" role="button">
+<div class="w-8 h-8 flex items-center justify-center text-[#0B7A60] mb-1.5">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<span class="text-[13px] font-medium text-[#1E293B]">Công nợ</span>
+</div>
+<!-- Xem kho -->
+<div class="bg-white rounded-2xl py-3.5 px-1 flex flex-col items-center justify-center border border-[#E9ECEF] shadow-[0_1px_4px_rgba(0,0,0,0.02)] active:scale-95 transition-transform" role="button">
+<div class="w-8 h-8 flex items-center justify-center text-[#0B7A60] mb-1.5">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<span class="text-[13px] font-medium text-[#1E293B]">Xem kho</span>
+</div>
+</div>
+</section>
+<!-- END: DailyActions -->
+<!-- BEGIN: ActiveLedgerBanner -->
+<section class="relative overflow-hidden bg-gradient-to-br from-[#0B7A60] to-[#065A45] text-white rounded-[24px] p-5 shadow-[0_6px_20px_rgba(11,122,96,0.18)]" data-purpose="daily-status-banner">
+<!-- Abstract Watermark Circles in Top Right -->
+<div class="absolute -right-6 -top-6 w-32 h-32 rounded-full bg-white/5 pointer-events-none flex items-center justify-center">
+<div class="w-16 h-16 rounded-full bg-black/10"></div>
+</div>
+<!-- Pill Badge -->
+<span class="inline-block px-2.5 py-1 rounded-full bg-white/20 backdrop-blur-sm text-[11px] font-semibold text-white tracking-wide mb-2.5">
+          Sổ chủ động
+        </span>
+<!-- Time & Status -->
+<div class="text-[12px] font-bold text-white/90 tracking-wider uppercase mb-1">
+          SỔ SÁNG · 08:29
+        </div>
+<!-- Banner Title -->
+<h3 class="text-[20px] font-bold leading-tight mb-2">
+          Mở sổ cho một ngày mới.
+        </h3>
+<!-- Advice paragraph -->
+<p class="text-[13px] leading-relaxed text-white/90 mb-4 font-normal">
+          Việc nên làm trước: Bánh flan chỉ đủ khoảng 6 ngày. Đang có 8tr công nợ cần để mắt tới.
+        </p>
+<!-- Divider -->
+<div class="w-full h-px bg-white/20 mb-3.5"></div>
+<!-- Metrics Row -->
+<div class="grid grid-cols-3 gap-2">
+<div>
+<div class="text-[11.5px] text-white/80 font-normal">Doanh thu</div>
+<div class="text-[17px] font-bold mt-0.5">0đ</div>
+</div>
+<div>
+<div class="text-[11.5px] text-white/80 font-normal">Tiền lãi</div>
+<div class="text-[17px] font-bold mt-0.5">0đ</div>
+</div>
+<div>
+<div class="text-[11.5px] text-white/80 font-normal">Đơn</div>
+<div class="text-[17px] font-bold mt-0.5">0</div>
+</div>
+</div>
+</section>
+<!-- END: ActiveLedgerBanner -->
+<!-- BEGIN: InsightsSection -->
+<section class="mb-4" data-purpose="smart-insights">
+<div class="flex items-center justify-between mb-2">
+<div>
+<h3 class="text-[17px] font-bold text-[#0F172A] tracking-tight">
+              Sổ thấy việc này
+            </h3>
+<p class="text-[12px] text-[#64748B]">
+              Một việc đáng chú ý hôm nay.
+            </p>
+</div>
+<button class="text-[14px] font-bold text-[#0B7A60] flex items-center hover:underline" type="button">
+            Tất cả &gt;
+          </button>
+</div>
+<!-- Insight Card -->
+<div class="bg-white rounded-[22px] p-4 border border-[#FDE68A]/70 shadow-sm">
+<div class="flex items-start gap-3">
+<!-- Box Icon in mint rounded square -->
+<div class="w-10 h-10 rounded-2xl bg-[#E6F8F0] flex items-center justify-center shrink-0 text-[#0B7A60]">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<!-- Content -->
+<div class="flex-1">
+<h4 class="text-[14px] font-bold text-[#0F172A] leading-snug">
+                Bánh flan chỉ đủ khoảng 6 ngày
+              </h4>
+<p class="text-[12.5px] text-[#64748B] leading-relaxed mt-1">
+                Còn 0 cái. Dựa trên nhịp bán gần nhất, Sổ gợi ý nhập khoảng 20 cái để đủ gần 7 ngày.
+              </p>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="grid grid-cols-2 gap-3 mt-4">
+<button class="w-full py-2.5 rounded-xl bg-[#D4F4E4] text-[#0B7A60] font-bold text-[13.5px] active:scale-[0.98] transition-transform" type="button">
+              Nhập gợi ý
+            </button>
+<button class="w-full py-2.5 rounded-xl bg-white border border-[#E2E8F0] text-[#1E293B] font-bold text-[13.5px] active:scale-[0.98] transition-transform" type="button">
+              Để mai
+            </button>
+</div>
+</div>
+</section>
+<!-- END: InsightsSection -->
+</main>
+<!-- END: MainContent -->
+<!-- BEGIN: BottomNavigation -->
+<nav class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[430px] bg-white border-t border-[#E5E7EB] px-2 py-1.5 flex items-center justify-around z-50 select-none shadow-[0_-4px_12px_rgba(0,0,0,0.03)]" data-purpose="bottom-tab-navigation">
+<!-- Tab: Sổ ơi (Active) -->
+<button class="flex flex-col items-center justify-center px-3 py-1 rounded-xl border border-[#D97706]/70 min-w-[70px]" type="button">
+<svg class="w-5 h-5 text-[#0B7A60]" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-[12px] font-bold text-[#0B7A60] mt-0.5">Sổ ơi</span>
+</button>
+<!-- Tab: Bán hàng -->
+<button class="flex flex-col items-center justify-center px-2 py-1 text-[#64748B] hover:text-[#0F172A] min-w-[65px]" type="button">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-[12px] font-medium mt-0.5">Bán hàng</span>
+</button>
+<!-- Center Floating Voice Button -->
+<div class="relative -top-3.5 px-1">
+<button aria-label="Nói nhanh với Sổ ơi" class="w-13 h-13 p-3.5 rounded-full bg-[#0B7A60] text-white shadow-[0_6px_16px_rgba(11,122,96,0.35)] ring-4 ring-[#EAF6F1] flex items-center justify-center active:scale-95 transition-transform" type="button">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<!-- Tab: Thu chi -->
+<button class="flex flex-col items-center justify-center px-2 py-1 text-[#64748B] hover:text-[#0F172A] min-w-[65px]" type="button">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-[12px] font-medium mt-0.5">Thu chi</span>
+</button>
+<!-- Tab: Quản lý -->
+<button class="flex flex-col items-center justify-center px-2 py-1 text-[#64748B] hover:text-[#0F172A] min-w-[65px]" type="button">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-[12px] font-medium mt-0.5">Quản lý</span>
+</button>
+</nav>
+<!-- END: BottomNavigation -->
+</div>
+</body></html>

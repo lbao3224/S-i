@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Sao lưu, Tài khoản &amp; Khách hàng</title>
+<!-- Tailwind CSS v3 CDN with forms & container queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            appBg: '#F3F4F6',
+            tealDark: '#0D6855',
+            tealAccent: '#10B981',
+            mintLight: '#E8F8F2',
+            mintBg: '#E1F7EC',
+            subText: '#6B7280',
+            cardBorder: '#F3F4F6',
+          },
+          fontFamily: {
+            sans: ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-layout">
+    /* Custom styling to ensure smooth iOS mobile feel */
+    body {
+      -webkit-tap-highlight-color: transparent;
+    }
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans flex justify-center min-h-screen">
+<!-- Mobile Screen Container -->
+<div class="w-full max-w-md bg-[#F4F5F7] min-h-screen flex flex-col relative pb-24 overflow-x-hidden">
+<!-- BEGIN: MainContent -->
+<main class="flex-1 p-3.5 space-y-3.5">
+<!-- BEGIN: BackupReportCard -->
+<!-- Card 1: SAO LƯU & BÁO CÁO -->
+<section class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100" data-purpose="backup-section">
+<!-- Subtitle Label -->
+<p class="text-xs uppercase tracking-wider font-semibold text-gray-400 mb-1">SAO LƯU &amp; BÁO CÁO</p>
+<!-- Title -->
+<h2 class="text-lg font-bold text-gray-900 tracking-tight">Dữ liệu local-first</h2>
+<!-- Description -->
+<p class="text-xs text-gray-500 mt-1 mb-3.5 leading-relaxed">Hiện có 8 sản phẩm, 4 khách hàng và 6 đơn.</p>
+<!-- Button Actions -->
+<div class="flex flex-col gap-2.5">
+<div class="flex items-center gap-2.5">
+<!-- Xuất JSON Button -->
+<button class="flex-1 inline-flex items-center justify-center gap-1.5 py-2 px-3 bg-[#E6F8F0] hover:bg-[#d8f3e7] text-[#0E7A60] rounded-xl text-xs font-semibold border border-transparent transition-colors" type="button">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.2" viewbox="0 0 24 24">
+<path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Xuất JSON</span>
+</button>
+<!-- Xuất PDF hôm nay Button -->
+<button class="flex-1 inline-flex items-center justify-center gap-1.5 py-2 px-3 bg-[#0D6855] hover:bg-[#0a5243] text-white rounded-xl text-xs font-semibold shadow-sm transition-colors" type="button">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M12 11v6m0 0l-2-2m2 2l2-2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Xuất PDF hôm nay</span>
+</button>
+</div>
+<!-- Khôi phục Button -->
+<div class="flex">
+<button class="inline-flex items-center justify-center gap-1.5 py-2 px-3.5 bg-white hover:bg-gray-50 text-gray-700 rounded-xl text-xs font-medium border border-gray-200 transition-colors shadow-2xs" type="button">
+<svg class="w-3.5 h-3.5 text-gray-600" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Khôi phục</span>
+</button>
+</div>
+</div>
+</section>
+<!-- END: BackupReportCard -->
+<!-- BEGIN: AccountCard -->
+<!-- Card 2: TÀI KHOẢN -->
+<section class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100" data-purpose="account-section">
+<!-- Subtitle Label -->
+<p class="text-xs uppercase tracking-wider font-semibold text-gray-400 mb-3">TÀI KHOẢN</p>
+<!-- User Info -->
+<div class="flex items-center gap-3 mb-3.5">
+<div class="w-8 h-8 rounded-lg bg-[#E6F8F0] flex items-center justify-center text-[#0E7A60]">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<span class="text-xs font-bold text-gray-900 tracking-tight">khoinhut69@gmail.com</span>
+</div>
+<!-- Buttons Row -->
+<div class="flex items-center gap-2.5">
+<button class="py-1.5 px-3.5 bg-white hover:bg-gray-50 text-gray-800 rounded-xl text-xs font-medium border border-gray-200 transition-colors" type="button">
+            Đổi mật khẩu
+          </button>
+<button class="py-1.5 px-3.5 bg-white hover:bg-red-50 text-red-500 rounded-xl text-xs font-medium border border-red-200 transition-colors" type="button">
+            Đăng xuất
+          </button>
+</div>
+</section>
+<!-- END: AccountCard -->
+<!-- BEGIN: CustomerCard -->
+<!-- Card 3: KHÁCH HÀNG -->
+<section class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100" data-purpose="customers-section">
+<!-- Header with Add Button -->
+<div class="flex items-start justify-between gap-2 mb-3">
+<div>
+<h2 class="text-base font-bold text-gray-900 tracking-tight">Khách hàng</h2>
+<p class="text-[10px] text-gray-400 mt-0.5">Lưu khách quen để ghi nợ và tra cứu chính xác.</p>
+</div>
+<button class="inline-flex items-center gap-1 px-3 py-1.5 bg-[#E2F7EE] hover:bg-[#d0f2e4] text-[#0E7A60] rounded-xl text-xs font-semibold whitespace-nowrap transition-colors" type="button">
+<span class="text-sm leading-none">+</span>
+<span>Thêm khách</span>
+</button>
+</div>
+<!-- Customer List -->
+<div class="space-y-2">
+<!-- Customer 1 -->
+<article class="p-3 bg-gray-50/75 hover:bg-gray-50 rounded-xl transition-colors">
+<h3 class="text-xs font-bold text-gray-900">Chị Lan</h3>
+<p class="text-xs text-gray-500 mt-0.5">0912345678</p>
+</article>
+<!-- Customer 2 -->
+<article class="p-3 bg-gray-50/75 hover:bg-gray-50 rounded-xl transition-colors">
+<h3 class="text-xs font-bold text-gray-900">Anh Tuấn</h3>
+<p class="text-xs text-gray-500 mt-0.5">0987654321</p>
+</article>
+<!-- Customer 3 -->
+<article class="p-3 bg-gray-50/75 hover:bg-gray-50 rounded-xl transition-colors">
+<h3 class="text-xs font-bold text-gray-900">Cô Bảy</h3>
+<p class="text-xs text-gray-500 mt-0.5">0903334444</p>
+</article>
+<!-- Customer 4 -->
+<article class="p-3 bg-gray-50/75 hover:bg-gray-50 rounded-xl transition-colors">
+<h3 class="text-xs font-bold text-gray-900">Công Thịnh</h3>
+<p class="text-xs text-gray-400 mt-0.5 font-normal">Chưa có số điện thoại</p>
+</article>
+</div>
+</section>
+<!-- END: CustomerCard -->
+</main>
+<!-- END: MainContent -->
+<!-- BEGIN: BottomNavigation -->
+<nav class="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-white border-t border-gray-100 px-3 py-1 flex items-center justify-between z-30 shadow-[0_-2px_10px_rgba(0,0,0,0.03)]">
+<!-- Nav Item: Sổ ơi -->
+<a class="flex flex-col items-center justify-center flex-1 py-1 text-gray-400 hover:text-gray-600 transition-colors" href="#">
+<svg class="w-5 h-5 mb-0.5" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24">
+<rect height="6" rx="1.5" width="6" x="4" y="4"></rect>
+<rect height="6" rx="1.5" width="6" x="14" y="4"></rect>
+<rect height="6" rx="1.5" width="6" x="4" y="14"></rect>
+<rect height="6" rx="1.5" width="6" x="14" y="14"></rect>
+</svg>
+<span class="text-[11px] font-medium leading-tight">Sổ ơi</span>
+</a>
+<!-- Nav Item: Bán hàng -->
+<a class="flex flex-col items-center justify-center flex-1 py-1 text-gray-400 hover:text-gray-600 transition-colors" href="#">
+<svg class="w-5 h-5 mb-0.5" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24">
+<path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-[11px] font-medium leading-tight">Bán hàng</span>
+</a>
+<!-- Center Floating Mic Button -->
+<div class="flex flex-col items-center justify-center flex-1 -mt-5 relative">
+<button aria-label="Ghi âm" class="w-12 h-12 rounded-full bg-[#0D6855] text-white flex items-center justify-center shadow-lg ring-4 ring-white hover:bg-[#0a5344] active:scale-95 transition-all" type="button">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<!-- Nav Item: Thu chi -->
+<a class="flex flex-col items-center justify-center flex-1 py-1 text-gray-400 hover:text-gray-600 transition-colors" href="#">
+<svg class="w-5 h-5 mb-0.5" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24">
+<path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-[11px] font-medium leading-tight">Thu chi</span>
+</a>
+<!-- Nav Item: Quản lý (Active Tab) -->
+<a class="flex flex-col items-center justify-center flex-1 py-1 text-[#0D6855] transition-colors" href="#">
+<svg class="w-5 h-5 mb-0.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-[11px] font-bold leading-tight">Quản lý</span>
+</a>
+</nav>
+<!-- END: BottomNavigation -->
+</div>
+</body></html>

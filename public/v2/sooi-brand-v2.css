@@ -1,0 +1,56 @@
+/* SỔ ƠI V2 — giao diện mới, độc lập web cũ. Shared Android & Web. */
+:root {--sooi-ink:#142b2b;--sooi-green:#078269;--sooi-bg:#f4f9f6;--sooi-soft:#e9f8f0;--sooi-line:#dceae4}
+html {scroll-behavior:smooth}
+body {background:radial-gradient(ellipse at 65% -12%,#d9f5e6 0,transparent 42%),#f4f9f6!important;color:var(--sooi-ink)}
+#main-app-container {background:#f5f9f7!important;box-shadow:0 10px 60px #154b3d12!important}
+#main-app-container header {background:#fff!important}
+#main-app-container header,#main-app-container .view-panel>div{border-color:var(--sooi-line)}
+#main-app-container .rounded-2xl,#main-app-container .rounded-3xl {box-shadow:0 3px 14px #1755420a}
+#main-app-container button {transition:filter .15s ease,transform .15s ease}
+#main-app-container button:active {transform:scale(.985)}
+#auth-gatekeeper {background:radial-gradient(ellipse at 50% -5%,#d5f6e4 0%,#f8fbf9 53%,#f2f7f4 100%)!important}
+#auth-gatekeeper input {background:#f9fcfa}
+#auth-gatekeeper input:focus {outline:2px solid #74c6ad;outline-offset:1px}
+#bottom-nav {border-color:#dceae4!important}
+/* Desktop: genuine responsive application workspace; mobile retains original layout */
+@media (min-width: 960px){
+  body {display:block!important;min-height:100vh}
+  #main-app-container {width:calc(100% - 300px)!important;max-width:1250px!important;margin:28px auto 32px 260px!important;min-height:calc(100vh - 56px);border-radius:28px!important;border:1px solid #dbeae4!important;overflow:visible!important;padding-bottom:30px!important}
+  #main-app-container .view-panel {padding-bottom:36px}
+  #main-app-container .view-panel > header {border-radius:28px 28px 0 0}
+  #main-app-container .view-panel > main {max-width:1100px;margin:0 auto;width:100%}
+  #main-app-container .view-panel > section {max-width:1100px;margin-left:auto;margin-right:auto;width:100%}
+  #bottom-nav {position:fixed!important;top:24px!important;bottom:24px!important;left:24px!important;transform:none!important;width:218px!important;max-width:218px!important;height:auto!important;border:1px solid #dceae4!important;border-radius:24px!important;flex-direction:column!important;justify-content:flex-start!important;gap:10px!important;padding:82px 12px 18px!important;box-shadow:0 12px 35px #1f513321!important;overflow-y:auto}
+  #bottom-nav:before {content:'SỔ ƠI  •  V2';position:absolute;top:27px;left:20px;color:#078269;font-weight:900;font-size:19px;letter-spacing:.035em}
+  #bottom-nav .nav-item {width:100%!important;flex-direction:row!important;justify-content:flex-start!important;gap:14px!important;border-radius:14px;padding:12px!important;text-align:left!important}
+  #bottom-nav .nav-item .material-symbols-outlined {font-size:24px!important}
+  #bottom-nav .nav-item span {white-space:nowrap}
+}
+@media (min-width:960px) and (max-width:1200px){#main-app-container{width:calc(100% - 280px)!important;margin-left:256px!important}}
+@media (max-width:959px){#main-app-container{max-width:520px!important}}
+/* SỔ ƠI original-site inspired visual refresh (presentation only). */
+:root{--sooi-deep:#075b4c;--sooi-mint:#c8f1df;--sooi-cream:#fffdf7;--sooi-foreground:#17312a}
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif!important;background:linear-gradient(155deg,#e6f8ee 0%,#f7fbf7 37%,#f4f7f5 100%)!important;color:var(--sooi-foreground)!important}
+#auth-gatekeeper{background:linear-gradient(150deg,#e6f9ee 0%,#f7fbf8 60%,#fffdf6 100%)!important}
+#gatekeeper-form-card{border:1px solid #d9eee4!important;border-radius:28px!important;box-shadow:0 24px 70px rgba(17,81,60,.095)!important}
+#auth-gatekeeper h1{letter-spacing:-.045em!important}
+#main-app-container{border-color:#d7e8de!important;background:#f6faf7!important}
+#main-app-container header{background:#fffefa!important;box-shadow:0 1px 0 #dcece2!important}
+#main-app-container .view-panel{color:#172f29}
+#main-app-container .view-panel .bg-white{border-color:#e0eee5!important}
+#main-app-container input:focus,#main-app-container select:focus{outline-color:#22a47e!important}
+#main-app-container .rounded-2xl,#main-app-container .rounded-3xl{border-radius:22px!important}
+#bottom-nav{background:#fffefa!important}
+@media(min-width:960px){
+  body{background:linear-gradient(120deg,#eff9f2 0%,#f8fbfa 40%,#f8f5ed 100%)!important}
+  #main-app-container{margin-top:36px!important;box-shadow:0 20px 70px rgba(5,71,52,.085)!important}
+  #bottom-nav{background:linear-gradient(160deg,#ffffff,#f6fbf6)!important;box-shadow:0 14px 45px #194d3621!important}
+  #bottom-nav:before{content:'✧  SỔ ƠI';font-size:23px;letter-spacing:-.045em;color:#06765c}
+  #bottom-nav .nav-item:hover{background:#e8f6ed!important}
+}
+
+/* Hide ONLY sidebar microphone on desktop. Keep mobile bottom and assistant mic. */
+@media (min-width:960px){#nav-center-mic{display:none!important}#bottom-nav>div:has(>#nav-center-mic){display:none!important}}
+
+/* Hide sidebar voice launcher; retain microphone inside assistant. */
+@media(min-width:960px){#nav-center-mic{display:none!important}#bottom-nav .nav-center-mic-wrapper{display:none!important}}
